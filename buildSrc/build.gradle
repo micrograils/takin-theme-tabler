@@ -3,7 +3,11 @@ repositories {
     maven { url "https://repo.grails.org/grails/core/" }
 }
 dependencies {
-    implementation("com.bertramlabs.plugins:asset-pipeline-gradle:4.3.0")
+    implementation('com.bertramlabs.plugins:asset-pipeline-gradle:4.5.1')
     implementation("org.grails:grails-gradle-plugin:6.2.1")
     implementation("org.grails.plugins:hibernate5:8.1.0")
+    // FIX for GHSA-xxxx
+    implementation('com.google.protobuf:protobuf-java:4.28.2')  // GHSA-735f-pc8j-v9w8
+    implementation('org.springframework:spring-context:6.1.14') // GHSA-2wrp-6fg6-hmc5
+    implementation('org.springframework:spring-web:6.1.12') // GHSA-2wrp-6fg6-hmc5
 }
